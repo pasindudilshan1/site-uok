@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department of IT - Enhanced Design</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+       
+:root {
+    --gradient-color-1: #b1f0f78f;
+    --gradient-color-2: #81bfda50;
+    --gradient-color-3: #bcccdc4d;
+    --gradient-color-4: #D9EAFD;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    position: relative;
+    background: linear-gradient(
+        45deg,
+        var(--gradient-color-1),
+        var(--gradient-color-2),
+        var(--gradient-color-3),
+        var(--gradient-color-4)
+    );
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+        circle at center,
+        transparent 0%,
+        rgba(88, 90, 112, 0.082) 100%
+    );
+    pointer-events: none;
+    z-index: 1;
+}
+
+.content-wrapper {
+    position: relative;
+    z-index: 42;
+    
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 70%;
+    }
+    50% {
+        background-position: 00% 10%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyBAMAAADsEZWCAAAAElBMVEUAAAD8/vz08vT09PT8+vz///+Tb1ocAAAABnRSTlMABgcICQoLlzluAAAAN0lEQVQ4y2NgQAX8QMDABmUwMqCKg1jQ5EEs6PJwFkYacCrcCA4kFpw0MAFpYDlyYGVnHzrpBwBknhWLkHhgwwAAAABJRU5ErkJggg==');
+    opacity: 0.02;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.card, .button, .nav-item {
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover, .button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+body {
+    color: #fff;
+}
+
+.glass-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f9;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+
+        nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: #2c3e50;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.nav-center {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #3498db;
+}
+
+nav a.btn {
+    background-color: #3498db;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+nav a.btn:hover {
+    background-color: #2980b9;
+}
+
+        
+        .hero {
+            
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+      
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .feature-card h2 {
+            margin-bottom: 1rem;
+            color: #34495e;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-left">
+            <a href="index.html"><img src="./images/logo.png" alt="Logo" style="height: 40px;"></a>
+        </div>
+        <ul class="nav-center">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="course.html">Courses</a></li>
+            <li><a href="register.html">Register-course</a></li>
+            <li><a href="staff.html">Staff</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="contact us.html">Contact-Us</a></li>
+        </ul>
+        <div class="nav-right">
+            <a href="login.html">Login</a>
+            <a href="signup.html" class="btn">Sign Up</a>
+        </div>
+    </nav>
+    
+    
+
+    <div class="slideshow-container">
+        <div class="slide fade" style="background-image: url('./images/1.jpg');">
+            <div class="text">Welcome to the Department of IT</div>
+        </div>
+    
+        <div class="slide fade" style="background-image: url('./images/2.jpg');">
+            <div class="text">Empowering the Future</div>
+        </div>
+    
+        <div class="slide fade" style="background-image: url('./images/3.jpg');">
+            <div class="text">Innovation and Excellence</div>
+        </div>
+    </div>
+    
+    <div class="dots-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    
+    <style>
+        .slideshow-container {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+        }
+    
+        .slide {
+            display: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+    
+        .text {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.5rem;
+        }
+    
+        .dots-container {
+            text-align: center;
+            margin-top: 10px;
+        }
+    
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+        }
+    
+        .dot.active {
+            background-color: #717171;
+        }
+    
+        .fade {
+            animation: fade 1.5s ease-in-out;
+        }
+    
+        @keyframes fade {
+            from { opacity: 0.4; }
+            to { opacity: 1; }
+        }
+        footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+    position: relative; 
+}
+
+footer .footer-logo {
+    position: absolute; 
+    left: 20px; 
+    top: 20px; 
+}
+
+footer .footer-logo img {
+    height: 80px; 
+    width: auto; 
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+.student-portal {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin: 2rem auto;
+        padding: 1rem;
+        max-width: 1200px;
+    }
+
+    .portal-button {
+        background-color: #d6a54f; 
+        color: #fff;
+        padding: 1rem 1.5rem;
+        border-radius: 8px;
+        text-align: center;
+        font-size: 1rem;
+        font-weight: bold;
+        text-decoration: none;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+        min-width: 200px;
+    }
+
+    .portal-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+        background-color: #c3933b; }
+
+        
+    </style>
+    
+    <script>
+        let slideIndex = 0;
+        showSlides();
+    
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            let dots = document.getElementsByClassName("dot");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 4000); 
+        }
+    
+        function currentSlide(index) {
+            slideIndex = index - 1;
+            showSlides();
+        }
+    </script>
+    
+    
+    
+    
+
+    <main>
+        <section class="features">
+            <div class="feature-card">
+                <h2>Excellence in Education</h2>
+                <p>Delivering top-notch IT education with state-of-the-art facilities.</p>
+            </div>
+            <div class="feature-card">
+                <h2>Industry Collaboration</h2>
+                <p>Partnering with tech leaders to offer practical exposure and internships.</p>
+            </div>
+            <div class="feature-card">
+                <h2>Innovation Hub</h2>
+                <p>Promoting research and innovation through modern labs and resources.</p>
+            </div>
+        </section>
+    </main>
+    <section class="student-portal">
+        <a href="https://ekel.kln.ac.lk/login/index.php" class="portal-button" target="_blank">E-Kelaniya</a>
+        <a href="http://iccms.kln.ac.lk/" class="portal-button" target="_blank">ICCMS</a>
+        <a href="https://ditmis.kln.ac.lk/std/login.php" class="portal-button" target="_blank">Exam Results</a>
+        <a href="https://ict.kln.ac.lk/" class="portal-button" target="_blank">ICT Center</a>
+    </section>
+
+    <footer style="background: #07213b; color: white; padding: 1rem; text-align: center; margin-top: 3rem;">
+        <div class="footer-logo">
+            <img src="./images/logo.png" alt="Logo" style="height: 60px;">
+        </div>
+        <div>
+            
+            <p>&copy; 2024 Department of IT. All rights reserved.</p>
+            <p>
+                Follow us:
+                <a href="https://www.facebook.com/universityofkelaniya" style="color: white; margin: 0 10px; text-decoration: none;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/145/145802.png" alt="Facebook" style="width: 20px; vertical-align: middle;"> Facebook
+                </a>
+                |
+                <a href="University of Kelaniya Twitter Profile" style="color: white; margin: 0 10px; text-decoration: none;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/145/145812.png" alt="Twitter" style="width: 20px; vertical-align: middle;"> Twitter
+                </a>
+                |
+                <a href="University of Kelaniya LinkedIn Page" style="color: white; margin: 0 10px; text-decoration: none;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="LinkedIn" style="width: 20px; vertical-align: middle;"> LinkedIn
+                </a>
+            </p>
+            <p>
+                Contact us:
+                <a href="mailto:info@itdepartment.edu" style="color: white; text-decoration: none;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" style="width: 20px; vertical-align: middle;"> Email Us
+                </a>
+            </p>
+        </div>
+    </footer>
+    
+    
+</body>
+</html>

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department of IT - Courses</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f9;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+
+        nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: #2c3e50;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.nav-center {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #3498db;
+}
+
+nav a.btn {
+    background-color: #3498db;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+nav a.btn:hover {
+    background-color: #2980b9;
+}
+        .slideshow-container {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+        }
+        .slide {
+            display: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .text {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.7rem;
+        }
+
+        .dots-container {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background-color: #717171;}
+
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .course-card {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .course-title {
+            font-size: 1.5rem;
+            color: #34495e;
+            margin-bottom: 0.5rem;
+        }
+
+        .course-details {
+            color: #666;
+            margin: 1rem 0;
+        }
+
+        .course-tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: #e1f5fe;
+            color: #0288d1;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+    position: relative; 
+}
+
+footer .footer-logo {
+    position: absolute; 
+    left: 20px; 
+    top: 20px; 
+}
+
+footer .footer-logo img {
+    height: 80px; 
+    width: auto; 
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-left">
+            <a href="index.html"><img src="./images/logo.png" alt="Logo" style="height: 40px;"></a>
+        </div>
+        <ul class="nav-center">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="course.html">Courses</a></li>
+            <li><a href="register.html">Register-course</a></li>
+            <li><a href="staff.html">Staff</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="contact us.html">Contact-Us</a></li>
+        </ul>
+        <div class="nav-right">
+            <a href="login.html">Login</a>
+            <a href="signup.html" class="btn">Sign Up</a>
+        </div>
+    </nav>
+    <div class="slideshow-container">
+        <!-- Slide 1 -->
+        <div class="slide fade" style="background-image: url('./images/12.jpg');">
+            <div class="text"> Explore Our IT Courses</div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide fade" style="background-image: url('./images/13.jpg');">
+            <div class="text"> Learn from Experts</div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide fade" style="background-image: url('./images/14.jpg');">
+            <div class="text">Build Your Future</div>
+        </div>
+    </div>
+
+    <div class="dots-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <main>
+        <section class="course-grid">
+            <div class="course-card">
+                <span class="course-tag">Undergraduate</span>
+                <h2 class="course-title">Programming Fundamentals</h2>
+                <p class="course-details">Duration: 1 Semester | Credits: 3</p>
+                <p>An introduction to programming concepts and problem-solving using Python.</p>
+            </div>
+
+            <div class="course-card">
+                <span class="course-tag">Undergraduate</span>
+                <h2 class="course-title">Data Structures</h2>
+                <p class="course-details">Duration: 1 Semester | Credits: 4</p>
+                <p>Advanced programming concepts and implementation of various data structures.</p>
+            </div>
+
+            <div class="course-card">
+                <span class="course-tag">Graduate</span>
+                <h2 class="course-title">Machine Learning</h2>
+                <p class="course-details">Duration: 1 Semester | Credits: 4</p>
+                <p>Introduction to machine learning algorithms and their real-world applications.</p>
+            </div>
+
+            <div class="course-card">
+                <span class="course-tag">Graduate</span>
+                <h2 class="course-title">Cybersecurity</h2>
+                <p class="course-details">Duration: 1 Semester | Credits: 3</p>
+                <p>Principles and practices for ensuring digital security and integrity.</p>
+            </div>
+
+           
+            <div class="course-card">
+                 <span class="course-tag">Undergraduate</span>
+                 <h3 class="course-title">Database Management Systems</h3>
+                
+                <p class="course-details">Duration: 1 Semester  |  Credits: 4</p>
+                    
+                <p>Comprehensive study of database design, SQL, and database administration.</p>
+            </div>
+
+                <div class="course-card">
+                    <span class="course-tag">Graduate</span>
+                    <h3 class="course-title">Cloud Computing and DevOps</h3>
+                    
+                    <p class="course-details">Duration: 1 Semester  |  Credits: 4</p>
+                        <p>Study cloud platforms, containerization, and modern deployment practices.</p>
+                </div>
+               
+            
+        </section>
+    </main>
+
+    <footer style="background: #2c3e50; color: white; padding: 1rem; text-align: center; margin-top: 3rem;">
+        <div class="footer-logo">
+            <img src="./images/logo.png" alt="Logo" style="height: 60px;">
+        </div>
+        <div>
+            <p>&copy; 2024 Department of IT. All rights reserved.</p>
+            <p>
+                Follow us:
+                <a href="https://www.facebook.com/universityofkelaniya" style="color: white; margin: 0 10px; text-decoration: none;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/145/145802.png" alt="Facebook" style="width: 20px; vertical-align: middle;"> Facebook
+                </a>
+                |
+                <a href="University of Kelaniya Twitter Profile" style="color: white; margin: 0 10px; text-decoration: none;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/145/145812.png" alt="Twitter" style="width: 20px; vertical-align: middle;"> Twitter
+                </a>
+                |
+                <a href="University of Kelaniya LinkedIn Page" style="color: white; margin: 0 10px; text-decoration: none;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="LinkedIn" style="width: 20px; vertical-align: middle;"> LinkedIn
+                </a>
+            </p>
+            <p>
+                Contact us:
+                <a href="mailto:info@itdepartment.edu" style="color: white; text-decoration: none;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" style="width: 20px; vertical-align: middle;"> Email Us
+                </a>
+            </p>
+        </div>
+    </footer>
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            let dots = document.getElementsByClassName("dot");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 4000);
+        }
+
+        function currentSlide(index) {
+            slideIndex = index - 1;
+            showSlides();
+        }
+    </script>
+    
+    
+    
+</body>
+</html>

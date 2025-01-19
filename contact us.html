@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f9;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+
+        nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: #2c3e50;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.nav-center {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #3498db;
+}
+
+nav a.btn {
+    background-color: #3498db;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+nav a.btn:hover {
+    background-color: #2980b9;
+}
+        .slide {
+    position: relative;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .contact-info {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-info h2 {
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+
+        .contact-info p {
+            margin-bottom: 1rem;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        form {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        form h2 {
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        form input, form textarea, form button {
+            width: 100%;
+            margin-bottom: 1rem;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        form textarea {
+            resize: none;
+            height: 100px;
+        }
+
+        form button {
+            background: #3498db;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        form button:hover {
+            background: #2980b9;
+        }
+        footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+    position: relative; 
+}
+
+footer .footer-logo {
+    position: absolute; 
+    left: 20px; 
+    top: 20px; 
+}
+
+footer .footer-logo img {
+    height: 80px; 
+    width: auto; 
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-left">
+            <a href="index.html"><img src="./images/logo.png" alt="Logo" style="height: 40px;"></a>
+        </div>
+        <ul class="nav-center">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="course.html">Courses</a></li>
+            <li><a href="register.html">Register-course</a></li>
+            <li><a href="staff.html">Staff</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="contact us.html">Contact-Us</a></li>
+        </ul>
+        <div class="nav-right">
+            <a href="login.html">Login</a>
+            <a href="signup.html" class="btn">Sign Up</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="contact-info">
+            <h2>Contact Info</h2>
+            <p><strong>Department of Information Technology</strong></p>
+            <p>Faculty of Social Sciences, University of Kelaniya</p>
+            <p><strong>Phone:</strong> +94 112 345 678</p>
+            <p><strong>Email:</strong> <a href="mailto:dit@kln.ac.lk" style="color: #3498db;">dit@kln.ac.lk</a></p>
+        </div>
+
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.2835749764204!2d79.91386377446028!3d6.975831093024904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2580302af9ff7%3A0xca203f4c7d19c9f!2sFaculty%20of%20Social%20Sciences%2C%20University%20of%20Kelaniya!5e0!3m2!1sen!2slk!4v1735048039546!5m2!1sen!2slk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
+                
+            </iframe>
+        </div>
+    </div>
+
+    <div class="container">
+        <form>
+            <h2>Send Us a Message</h2>
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <footer style="background: #07213b; color: white; padding: 1rem; text-align: center; margin-top: 3rem;">
+        <div class="footer-logo">
+            <img src="./images/logo.png" alt="Logo" style="height: 60px;">
+        </div>
+        <div>
+            
+            <p>&copy; 2024 Department of IT. All rights reserved.</p>
+            <p>
+                Follow us:
+                <a href="https://www.facebook.com/universityofkelaniya" style="color: white; margin: 0 10px; text-decoration: none;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/145/145802.png" alt="Facebook" style="width: 20px; vertical-align: middle;"> Facebook
+                </a>
+                |
+                <a href="University of Kelaniya Twitter Profile" style="color: white; margin: 0 10px; text-decoration: none;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/145/145812.png" alt="Twitter" style="width: 20px; vertical-align: middle;"> Twitter
+                </a>
+                |
+                <a href="University of Kelaniya LinkedIn Page" style="color: white; margin: 0 10px; text-decoration: none;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="LinkedIn" style="width: 20px; vertical-align: middle;"> LinkedIn
+                </a>
+            </p>
+            <p>
+                Contact us:
+                <a href="mailto:info@itdepartment.edu" style="color: white; text-decoration: none;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" style="width: 20px; vertical-align: middle;"> Email Us
+                </a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
